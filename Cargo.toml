@@ -1,0 +1,45 @@
+[workspace]
+members = [
+    "crates/spx-cli",
+    "crates/spx-graph",
+    "crates/spx-transpiler",
+    "crates/spx-cache",
+    "crates/spx-ipc",
+    "crates/spx-watcher",
+]
+resolver = "2"
+
+[workspace.dependencies]
+# OXC
+oxc = { version = "0.116", features = ["transformer", "codegen"] }
+oxc_resolver = "11"
+
+# Async
+tokio = { version = "1", features = ["full"] }
+
+# Parallelism
+rayon = "1"
+
+# Cache
+dashmap = "6"
+blake3 = "1"
+
+# File watching
+notify = "7"
+
+# IPC
+interprocess = { version = "2", features = ["tokio"] }
+
+# Memory mapping
+memmap2 = "0.9"
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Error handling
+miette = { version = "7", features = ["fancy"] }
+thiserror = "2"
+
+# Serialization (source maps, IPC messages)
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
