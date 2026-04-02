@@ -1,7 +1,6 @@
 [workspace]
 members = [
     "crates/spx-cli",
-    "crates/spx-graph",
     "crates/spx-transpiler",
     "crates/spx-cache",
     "crates/spx-ipc",
