@@ -1,0 +1,10 @@
+[package]
+name = "spx-transpiler"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+oxc = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }

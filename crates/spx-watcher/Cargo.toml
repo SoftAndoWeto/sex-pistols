@@ -1,0 +1,10 @@
+[package]
+name = "spx-watcher"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+notify = { workspace = true }
+tokio = { workspace = true }
+thiserror = { workspace = true }
+spx-cache = { path = "../spx-cache" }

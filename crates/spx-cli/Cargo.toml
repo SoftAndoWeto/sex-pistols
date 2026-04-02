@@ -1,0 +1,15 @@
+[package]
+name = "spx-cli"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { workspace = true }
+tokio = { workspace = true }
+miette = { workspace = true }
+thiserror = { workspace = true }
+spx-graph = { path = "../spx-graph" }
+spx-cache = { path = "../spx-cache" }
+spx-ipc = { path = "../spx-ipc" }
+spx-watcher = { path = "../spx-watcher" }
+spx-transpiler = { path = "../spx-transpiler" }

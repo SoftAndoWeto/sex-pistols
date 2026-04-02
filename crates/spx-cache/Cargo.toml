@@ -1,0 +1,13 @@
+[package]
+name = "spx-cache"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dashmap = { workspace = true }
+blake3 = { workspace = true }
+memmap2 = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+spx-transpiler = { path = "../spx-transpiler" }

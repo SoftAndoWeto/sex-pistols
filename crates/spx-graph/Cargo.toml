@@ -1,0 +1,12 @@
+[package]
+name = "spx-graph"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+oxc = { workspace = true }
+oxc_resolver = { workspace = true }
+rayon = { workspace = true }
+thiserror = { workspace = true }
+spx-transpiler = { path = "../spx-transpiler" }
+spx-cache = { path = "../spx-cache" }
