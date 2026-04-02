@@ -11,7 +11,7 @@ resolver = "2"
 
 [workspace.dependencies]
 # OXC
-oxc = { version = "0.116", features = ["transformer", "codegen"] }
+oxc = { version = "0.116", features = ["transformer", "codegen", "semantic"] }
 oxc_resolver = "11"
 
 # Async
