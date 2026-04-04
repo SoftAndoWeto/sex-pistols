@@ -1,10 +1,8 @@
 [workspace]
 members = [
     "crates/spx-cli",
-    "crates/spx-graph",
     "crates/spx-transpiler",
     "crates/spx-cache",
-    "crates/spx-ipc",
     "crates/spx-watcher",
 ]
 resolver = "2"
@@ -26,9 +24,6 @@ blake3 = "1"
 
 # File watching
 notify = "7"
-
-# IPC
-interprocess = { version = "2", features = ["tokio"] }
 
 # Memory mapping
 memmap2 = "0.9"
