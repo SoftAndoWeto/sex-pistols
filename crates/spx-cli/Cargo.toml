@@ -5,9 +5,14 @@ edition = "2024"
 
 [dependencies]
 clap = { workspace = true }
-tokio = { workspace = true }
 miette = { workspace = true }
 thiserror = { workspace = true }
+rayon = { workspace = true }
+serde_json = { workspace = true }
+oxc = { workspace = true }
+oxc_resolver = { workspace = true }
 spx-cache = { path = "../spx-cache" }
-spx-watcher = { path = "../spx-watcher" }
 spx-transpiler = { path = "../spx-transpiler" }
+
+[dev-dependencies]
+tempfile = "3"
