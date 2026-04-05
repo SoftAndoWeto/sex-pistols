@@ -3,6 +3,15 @@ use std::process::Command;
 
 use crate::error::SpxError;
 
+fn path_to_file_url(path: &Path) -> String {
+    let s = path.to_string_lossy().replace('\\', "/");
+    if s.starts_with('/') {
+        format!("file://{s}")
+    } else {
+        format!("file:///{s}")
+    }
+}
+
 pub fn run(
     entry: &Path,
     args: &[String],
@@ -12,9 +21,11 @@ pub fn run(
     let esm_loader = loader_dir.join("esm-loader.mjs");
     let cjs_register = loader_dir.join("cjs-register.cjs");
 
+    let esm_loader_url = path_to_file_url(&esm_loader);
+
     let status = Command::new("node")
         .arg("--import")
-        .arg(&esm_loader)
+        .arg(&esm_loader_url)
         .arg("--require")
         .arg(&cjs_register)
         .arg(entry)
